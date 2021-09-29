@@ -1,79 +1,62 @@
-<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
-    <div class="card card0 border-0">
-        <div class="row d-flex">
-            <div class="col-lg-6">
-                <div class="card1 pb-5">
-                    <div class="row"> </div>
-                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="https://i.imgur.com/uNGdWHi.png" class="image"> </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card2 card border-0 px-4 py-5">
-                    <div class="row mb-4 px-3">
-                        <h6 class="mb-0 mr-4 mt-2">Sign in with</h6>
-                        <div class="facebook text-center mr-3">
-                            <div class="fa fa-facebook"></div>
-                        </div>
-                        <div class="twitter text-center mr-3">
-                            <div class="fa fa-twitter"></div>
-                        </div>
-                        <div class="linkedin text-center mr-3">
-                            <div class="fa fa-linkedin"></div>
-                        </div>
-                    </div>
-                    <div class="row px-3 mb-4">
-                        <div class="line"></div> <small class="or text-center">Or</small>
-                        <div class="line"></div>
-                    </div>
-                        <form (ngSubmit)="onSubmit()" #f="ngForm">
-                                <div class="form-group" ngModelGroup="userData" #userData="ngModelGroup">
-                                    <div class="row px-3"> 
-                                        <label class="mb-1" for="email">
-                                            <h6 class="mb-0 text-sm" >Email Address</h6>
-                                        </label> 
-                                        <input class="mb-4"
-                                        type="text" 
-                                        name="email"
-                                        placeholder="Enter a valid email address"
-                                        ngModel
-                                        #email="ngModel"
-                                        required
-                                        email> 
-                                    </div>
-                                    <div class="row px-3"> 
-                                        <label class="mb-1" for="password">
-                                            <h6 class="mb-0 text-sm">Password</h6>
-                                        </label> 
-                                        <input type="password"
-                                        name="password" 
-                                        placeholder="Enter password" 
-                                        ngModel
-                                        #password="ngModel"
-                                        required
-                                        password> 
-                                    </div>
-                                    <div class="row px-3 mb-4">
-                                        <div class="custom-control custom-checkbox custom-control-inline"> <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> <label for="chk1" class="custom-control-label text-sm">Remember me</label> </div> <a href="#" class="ml-auto mb-0 text-sm">Forgot Password?</a>
-                                    </div>
-                                    <div class="row mb-3 px-3"> <button type="submit" class="btn btn-blue text-center" [disabled] = "!f.valid">Login</button></div>
-                                    <div class="row mb-4 px-3"> <small class="font-weight-bold">Don't have an account? <a class="text-danger " href="/register">Register</a></small> </div>
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-xl-10 col-lg-12 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <!-- <div class="col-lg-6 d-none d-lg-block bg-login-image"></div> -->
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                 </div>
-                        </form>
+                                <form class="user">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control form-control-user"
+                                            id="exampleInputEmail" aria-describedby="emailHelp"
+                                            placeholder="Enter Email Address...">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="exampleInputPassword" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck">
+                                            <label class="custom-control-label" for="customCheck">Remember
+                                                Me</label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-user btn-block" type="submit">
+                                       {{ isLoginMode ? 'Login' : 'Sign up'}}
+                                    </button>
+                                    <hr>
+                                    <button class="btn btn-google btn-user btn-block" (click)="onSwitchMode()" type="button">
+                                        {{ isLoginMode ? 'Signup' :'Login'}}
+                                    </button>
+                                    
+                                    
+                                </form>
+                                <hr>
+                                <div class="text-center">
+                                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                </div>
+                                <div class="text-center">
+                                    <a class="small" href="register.html">Create an Account!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
-        <div class="bg-blue py-4">
-            <div class="row px-3"> <small class="ml-4 ml-sm-5 mb-2">All rights reserved.</small>
-                <div class="social-contact ml-4 ml-sm-auto"> <span class="fa fa-facebook mr-4 text-sm"></span> <span class="fa fa-google-plus mr-4 text-sm"></span> <span class="fa fa-linkedin mr-4 text-sm"></span> <span class="fa fa-twitter mr-4 mr-sm-5 text-sm"></span> </div>
-            </div>
-        </div>
+
     </div>
-    <div class="row" *ngIf="submitted">
-        <div class="col-xs-12">
-            <h3>Your Data</h3>
-            <p>Username: {{ user.email }}</p>
-            <p>Password: {{ user.password }}</p>
-        </div>
-        
-    </div>
+
 </div>

@@ -15,11 +15,16 @@ export class LoginComponent  {
     password: '',
   };
    submitted = false;
+   isLoginMode = true;
 
     onSubmit() {
       this.submitted = true;
       this.user.email = this.signupForm.value.userData.email;
       this.user.password = this.signupForm.value.userData.password;
       this.signupForm.reset();
+    }
+
+    onSwitchMode() {
+      this.isLoginMode= !this.isLoginMode
     }
 }
