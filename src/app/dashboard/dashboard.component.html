@@ -1,0 +1,8 @@
+<button class="btn btn-primary" (click)="onAddServer()">Add service</button>
+
+<ul class="list-group">
+    <li
+      class="list-group-item"
+      *ngFor="let server of servers; let i = index"
+      (click)="onRemoveServer(i)">{{ server }}</li>
+  </ul>
