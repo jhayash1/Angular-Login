@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -11,7 +13,7 @@ import { TeamsComponent } from './teams/teams.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { FormsModule } from '@angular/forms';
+import { LoadindSpinnerComponent } from './loadind-spinner/loadind-spinner.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     DashboardComponent,
     GridComponent,
-    
     ServiceComponent,
     TeamsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoadindSpinnerComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule
