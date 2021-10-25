@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LoadindSpinnerComponent } from './loadind-spinner/loadind-spinner.component';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LoadindSpinnerComponent } from './loadind-spinner/loadind-spinner.compo
     TeamsComponent,
     LoginComponent,
     RegisterComponent,
-    LoadindSpinnerComponent
+    LoadindSpinnerComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
+import { PopupComponent } from './popup/popup.component';
 import { RegisterComponent } from './register/register.component';
 import { ServiceComponent } from './service/service.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: '', component: SidebarComponent, children: [
     { path : 'dashboard' , component: DashboardComponent },
     { path : 'service' , component: ServiceComponent},
-    { path : 'teams' , component: TeamsComponent}
+    { path : 'teams' , component: TeamsComponent},
+    { path : 'popup' , component: PopupComponent}
   ] }
 ];
 
