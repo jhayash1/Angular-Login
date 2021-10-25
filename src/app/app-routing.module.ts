@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ApiComponent } from './api/api.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { PopupComponent } from './popup/popup.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
     { path : 'dashboard' , component: DashboardComponent },
     { path : 'service' , component: ServiceComponent},
     { path : 'teams' , component: TeamsComponent},
-    { path : 'popup' , component: PopupComponent}
+    { path : 'popup' , component: PopupComponent},
+    { path : 'api' , component: ApiComponent}
   ] }
 ];
 

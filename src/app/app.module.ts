@@ -15,6 +15,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LoadindSpinnerComponent } from './loadind-spinner/loadind-spinner.component';
 import { PopupComponent } from './popup/popup.component';
+import { ApiComponent } from './api/api.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { PopupComponent } from './popup/popup.component';
     LoginComponent,
     RegisterComponent,
     LoadindSpinnerComponent,
-    PopupComponent
+    PopupComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { PopupComponent } from './popup/popup.component';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
+    NgxPaginationModule,
     BrowserAnimationsModule
   ],
   providers: [],
