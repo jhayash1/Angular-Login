@@ -17,6 +17,7 @@ import { LoadindSpinnerComponent } from './loadind-spinner/loadind-spinner.compo
 import { PopupComponent } from './popup/popup.component';
 import { ApiComponent } from './api/api.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     RegisterComponent,
     LoadindSpinnerComponent,
     PopupComponent,
-    ApiComponent
+    ApiComponent,
+    SplashScreenComponent
   ],
   imports: [
     BrowserModule,

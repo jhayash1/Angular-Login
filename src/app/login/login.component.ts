@@ -30,7 +30,7 @@ export class LoginComponent  {
       let authObs: Observable<AuthResponseData>;
 
       this.isLoading = true;
-  
+
       if (this.isLoginMode) {
         authObs = this.authService.login(email, password)
       } else {
@@ -44,14 +44,11 @@ export class LoginComponent  {
         },
         errorMessage => {
           console.log(errorMessage);
-          switch (errorMessage.error.error.message) {
-            case 'EMAIL_EXISTS':
-            this.error = 'This email is exist already'
-          }
+          this.error = errorMessage;
           this.isLoading = false;
         }
       );
-  
+
       form.reset();
     }
 }
