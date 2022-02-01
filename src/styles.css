@@ -10851,19 +10851,19 @@
   }
 
   .bg-login-image {
-    background: url("https://nilethemes.com/html/salma/assets/img/login.jpg");
+    background: url("../src/assets/img/undraw_posting_photo.svg");
     background-position: center;
     background-size: cover;
   }
 
   .bg-register-image {
-    background: url("https://nilethemes.com/html/salma/assets/img/login.jpg");
+    background: url("../src/assets/img/undraw_profile.svg");
     background-position: center;
     background-size: cover;
   }
 
   .bg-password-image {
-    background: url("https://nilethemes.com/html/salma/assets/img/login.jpg");
+    background: url("../src/assets/img/undraw_profile_2.svg");
     background-position: center;
     background-size: cover;
   }

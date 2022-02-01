@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { RouteComponent } from 'angular-routing';
 import { Observable } from 'rxjs';
 import { AuthResponseData, AuthService } from './auth.service';
 
@@ -14,7 +16,7 @@ export class LoginComponent  {
    isLoading = false;
    error: string = null;
 
-   constructor(private authService: AuthService) {}
+   constructor(private authService: AuthService, private router: Router) {}
 
     onSwitchMode() {
       this.isLoginMode= !this.isLoginMode
@@ -41,6 +43,7 @@ export class LoginComponent  {
         resData => {
           console.log(resData);
           this.isLoading = false;
+          this.router.navigate(['/dashboard']);
         },
         errorMessage => {
           console.log(errorMessage);
